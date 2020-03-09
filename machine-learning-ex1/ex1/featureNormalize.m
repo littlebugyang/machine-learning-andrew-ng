@@ -28,13 +28,13 @@ sigma = zeros(1, size(X, 2));
 
 mu = mean(X);
 sigma = std(X);
-single_mu = mu;
-single_sigma = sigma;
+multiple_mu = mu;
+multiple_sigma = sigma;
 for iter=1:(size(X, 1)-1)
-    mu = [mu; single_mu];
-    sigma = [sigma; single_sigma];
+    multiple_mu = [multiple_mu; mu];
+    multiple_sigma = [multiple_sigma; sigma];
 end
-X_norm = (X - mu) ./ sigma;
+X_norm = (X - multiple_mu) ./ multiple_sigma;
 
 % ============================================================
 

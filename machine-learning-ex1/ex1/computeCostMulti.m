@@ -14,7 +14,9 @@ J = 0;
 %               You should set J to the cost.
 
 
-
+% J = sum((X * theta - y) .^ 2) / 2 / m;
+% This two statements behave the same
+J = (X * theta - y)' * (X * theta - y) / 2 /m;
 
 
 % =========================================================================

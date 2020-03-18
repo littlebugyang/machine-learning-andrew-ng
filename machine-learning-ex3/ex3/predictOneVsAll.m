@@ -30,10 +30,9 @@ X = [ones(m, 1) X];
 %       for each row.
 %       
 
-
-
-
-
+% p = max(sigmoid(X * all_theta'), [], 2);
+[~, p] = max(sigmoid(X * all_theta'), [], 2);
+% We can't use the "p = max ... ", because we want the index of the maximum rather than their max probability
 
 
 % =========================================================================
